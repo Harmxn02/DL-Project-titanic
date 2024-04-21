@@ -2,12 +2,6 @@
 def feature_engineer(data):
     import pandas as pd
 
-    # #* New feature `Title` derived from column `Name`
-    # if "Name" in data.columns:
-    #     data['Title'] = data['Name'].str.extract(r',\s*([^\.]*)\.', expand=False)
-    #     data = data.drop(columns=["Name"], axis=1)
-
-
     #* New feature `FamilySize` derived from columns `SibSpi` and `Parch`
     data["FamilySize"] = data["SibSp"] + data["Parch"] + 1    # +1 for the passenger themselves
 
@@ -46,11 +40,6 @@ def feature_engineer(data):
     #* One-hot-encode column `Sex`
     if "Sex" in data.columns:
         data = pd.get_dummies(data, columns=["Sex"], prefix="Sex", dtype="int64")
-
-
-    #* One-hot-encode column `Title`
-    if "Title" in data.columns:
-        data = pd.get_dummies(data, columns=["Title"], prefix="Title", dtype="int64")
 
 
     #* One-hot-encode column `Age_Group`
