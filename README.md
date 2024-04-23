@@ -23,6 +23,7 @@ In this repository you will find all of the `.ipynb` notebooks and datasets for 
 1. `main.ipynb` contains all models that were trained
 2. `presentation.ipynb` contains all visualizations I used during the presentation
 3. `mypy.ini` is a configuration file for MyPy
+4. `kaggle_competition_url` contains the URL of the kaggle competition
 
 ### Util
 
